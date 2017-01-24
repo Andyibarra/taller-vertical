@@ -1,4 +1,22 @@
 jQuery(document).ready(function(){
+
+	/////////////////// AJAX PART /////////////////
+	// Gets all registres
+	$.ajax({
+
+			url: 'http://localhost:8080/api/form',
+		    type: 'GET',
+		 
+    		success: function (data) {
+
+        		$.each(data, function (key, value) {
+        			console.log(key);
+        			console.log(value);
+
+        	});
+   		 }
+	});
+
 	//cache DOM elements
 	var mainContent = $('.cd-main-content'),
 		header = $('.cd-main-header'),
@@ -127,4 +145,9 @@ jQuery(document).ready(function(){
 		}
 		scrolling = false;
 	}
+
+
+
+
+
 });
