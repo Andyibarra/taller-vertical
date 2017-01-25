@@ -3,15 +3,21 @@ const dburl 		= "mongodb://localhost:27017/medicalTourism"
 mongoose.connect(dburl);
 var Record			= require('./model/record');
 
+
 exports.newEntry = function(req, res){
 
 		//console.log(req.body);
 
 		var user = new Record();
 
-		user.name = req.body.name;
-		user.lname = req.body.lname;
-		user.speciality = req.body.special;
+		user.name 			= req.body.name;
+		user.lname 			= req.body.lname;
+		user.nationality 	= req.body.nation;
+		user.email			= req.body.email;	
+		user.locale 		= req.body.locale;
+		user.comment		= req.body.comments;
+		user.speciality 	= req.body.speciality;
+		user.status			= req.body.status;
 
 		user.save(function(err){
 

@@ -1,10 +1,11 @@
 jQuery(document).ready(function(){
 
 	/////////////////// AJAX PART /////////////////
+
 	// Gets all registres
 	$.ajax({
 
-			url: 'http://localhost:8080/api/form',
+			url: 'http://localhost:80/api/form',
 		    type: 'GET',
 		 
     		success: function (data) {

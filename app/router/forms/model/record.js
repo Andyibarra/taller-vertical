@@ -3,7 +3,6 @@ var Schema 		= mongoose.Schema;
 
 
 var recordSchema = new Schema({
-
 	name		: String,
 	lname		: String,
 	speciality 	: String,
@@ -11,7 +10,7 @@ var recordSchema = new Schema({
 	nationality	: String,
 	email		: String,
 	comment		: String,
-	acepted		: Boolean
+	status		: Number
 });
 
 
