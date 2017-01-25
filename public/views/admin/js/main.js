@@ -5,7 +5,7 @@ jQuery(document).ready(function(){
 	// Gets all registres
 	$.ajax({
 
-			url: 'http://localhost:80/api/form',
+			url: 'http://138.197.219.168/api/form',
 		    type: 'GET',
 		 
     		success: function (data) {
