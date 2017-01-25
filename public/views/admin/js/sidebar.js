@@ -6,5 +6,14 @@ $(function() {
         } else {
             $('div.sidebar-collapse').removeClass('collapse')
         }
-    })
-})
+    });
+
+    $(".jumpto").click(function() {
+				//alert("hey");
+				$(".wrapper").hide();
+				//$(".wrapper div").css('opacity',0).css('display','none');
+				//alert($(this).attr('id'));
+				$(".wrapper#content"+$(this).attr('id')).show();
+				//$(".wrapper div#content"+$(this).css('opacity',1)).css('display','block');
+			});
+});
