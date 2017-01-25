@@ -1,0 +1,36 @@
+body{
+  background: #BCBCBC; /*gris bajo*/
+  margin-top:50px;
+}
+
+.page-wrapper{
+  padding:0 20px;
+}
+
+.sidebar-menu{
+  background: #424242; /*gris fuerte*/
+}
+
+.sidebar-menu>li>a{
+  padding:10px 30px;
+}
+
+/*Si la resolución es mayor 768px*/
+@media(min-width:768px){
+  .wrapper{
+    padding-left:250px;
+  }
+  
+  .sidebar-menu{
+    width: 250px;
+    position:fixed;
+    top:50px;
+    left:250px;
+    margin-left:-250px;
+    height:100%;
+  }
+  
+  .sidebar-menu>li>a{
+    width:250px;
+  }
+}

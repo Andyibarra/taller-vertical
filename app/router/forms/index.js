@@ -6,5 +6,7 @@ var controller = require('./controller');
 var router = express.Router();
 router.post('/', controller.newEntry);
 router.get('/', controller.fetch);
+router.delete('/:rec_id', controller.delete);
+
 
 module.exports = router;
