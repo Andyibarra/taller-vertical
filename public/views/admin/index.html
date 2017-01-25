@@ -4,67 +4,100 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="css/reset.css"  type='text/css'> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"  type='text/css'> <!-- Resource style -->
-	<script tysrc="js/modernizr.js" type="text/javascript"></script> <!-- Modernizr -->
+	
 	<!-- https://codyhouse.co/gem/responsive-sidebar-navigation/ -->
 
-	<script src="js/jquery-2.1.4.js"></script>
-	<script src="js/jquery.menu-aim.js"></script>
-	<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<script type="text/javascript" src="../../dist/jquery-3.1.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../dist/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="js/sidebar.js"></script> 
+	<script src="js/main.js"></script> 
+
 
 	<title>Admin Panel</title>
 
 </head>
 <body>
-	<header class="cd-main-header">
-		<a href="#0" class="cd-logo"><img src="img/cd-logo.svg" alt="Logo"></a>
-	 
-		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
-	 
-		<nav class="cd-nav">
-			<ul class="cd-top-nav">
-				<li><a href="#0">Tour</a></li>
-				<li><a href="#0">Support</a></li>
-			</ul>
-		</nav>
-	</header> <!-- .cd-main-header -->
- 
-	<main class="cd-main-content">
-		<nav class="cd-side-nav">
-			<ul>
-				<li class="cd-label">Main</li>
-				<li class="has-children overview">
-					<a href="#0">Overview</a>
-					
-					<ul>
-						<li><a href="#0">All Data</a></li>
-						<!-- other list items here -->
-					</ul>
-				</li>
-				<li class="has-children notifications active">
-					<a href="#0">Notifications<span class="count">3</span></a>
-					
-					<ul>
-						<li><a href="#0">All Notifications</a></li>
-						<!-- other list items here -->
-					</ul>
-				</li>
-	 
-				<!-- other list items here -->
-			</ul>
-			<!-- other unordered lists here -->
-		</nav>
-	 
-		<div class="content-wrapper">
-			<!-- main content here -->
+	<header class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="navbar-header">
+	    
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+	      <span class="sr-only">Toggle</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    
+	    <a href="#" class="navbar-brand">[ Mi empresa ]</a>      
+	    
+	  </div>
+	   
+	  <div class="sidebar-collapse">
+	    
+	    <ul class="nav navbar-nav sidebar-menu">
+	      <li class="active"><a href="#">Buzón</a></li>
+	      <li><a href="#">En progreso</a></li>
+	      <li><a href="#">Terminados</a></li>
+	    </ul>	  
+	  </div>
+	</header>
 
 
-		</div> <!-- .content-wrapper -->
-	</main> <!-- .cd-main-content -->
+	<!-- contenido -->
+	<div class="wrapper" >
+	  <div class="page-wrapper">
 
+
+	     <div class="row" style="padding-top: 25px">
+
+
+	     <!--<div class="col-xs-12"><h1>Mi Dashboard</h1></div>-->
+	      
+	      <a href="#" class="list-group-item">
+	      	<div class="row">
+	      		<div class="col-md-1 col-md-offset-11">
+
+	      			FECHA
+	      		</div>
+
+	      	</div>
+
+	      	 <div class="row">
+		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Nombre </h3>
+		      	<h5> Ana Gabriela</h5>
+		      	</div>
+		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Especialidad </h3>
+		      	<h5> Cardiologo</h5>
+		      	</div>   
+		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Nacionalidad </h3>
+		      	<h5> Mexicana</h5>
+		      	</div>   
+		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Contacto </h3>
+		      	<h5> email@email.com</h5>
+		      	</div>   
+		   	</div>
+		   	<div class="row">
+				<div class="col-md-4"><h3 class="list-group-item-heading" >Comentarios </h3>
+					Coment		   	
+
+			   	</div>
+		   	</div>
+		   	<div class="row">
+		   		<div class="col-md-2 col-md-offset-10">
+			   		<span href="#" class="btn btn-success">Aceptar</span>
+			   		<span href="#" class="btn btn-danger">Rechazar<span>
+			   		
+		   	   </div>
+		   	</div>
+
+ 		  </a>
+
+	  </div>  
+
+
+	</div>
+  </div>
 
 </body>
 
