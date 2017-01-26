@@ -53,7 +53,7 @@ exports.delete = function(req, res){
 
 exports.getOnProgress = function(req, res){
 
-	Record.find({status : 1, status : 2, status: 3	}, function(err, data){
+	Record.find({$or:[{status : 1}, {status : 2}, {status: 3}]}, function(err, data){
 		if(err){
 			res.send(err);				
 		}
