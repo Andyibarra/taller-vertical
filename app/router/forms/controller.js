@@ -5,15 +5,9 @@ var Record			= require('./model/record');
 
 exports.newEntry = function(req, res){
 
-	var user = new Record();
+	console.log(req.body);
 
-	user.name 			= req.body.name;
-	user.lname 			= req.body.lname;
-	user.nationality 	= req.body.nation;
-	user.email			= req.body.email;	
-	user.locale 		= req.body.center;
-	user.comment		= req.body.comments;
-	user.speciality 	= req.body.speciality;
+	var user = new Record(req.body);
 
 	user.save(function(err){
 
