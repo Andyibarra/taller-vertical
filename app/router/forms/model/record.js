@@ -10,8 +10,18 @@ var recordSchema = new Schema({
 	nationality	: String,
 	email		: String,
 	comment		: String,
-	status		: Number
-});
+	status		: {type: Number , default: 0},
+	initDate	: {type: Date, default: Date.now },
+	checklist	: {type: Array, default: []},
+	doctor 		: {type :{	
+					name 	: String,
+					contact : String
+				}, default : null},
+	schedule	: {type : {
+					from	: Date,
+					to 		: Date
+				  }, default : null}
+	});
 
 
 module.exports = mongoose.model('Record', recordSchema);

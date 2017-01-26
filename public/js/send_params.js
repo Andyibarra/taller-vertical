@@ -1,9 +1,14 @@
-jQuery(document).ready(function(){
+$(document).ready(function(){
 
-	$('#send').click(function(){
 
-		var locale = $('.selectpicker').val();
-		var speciality 	  = $("#speciality_input").val();
+
+	$('#search').click(function(){
+
+		var locale = $('#center').val();
+		var speciality = $("#speciality").val();
+
+		console.log(speciality);
+
 
 		localStorage.setItem("locale", locale);
 		localStorage.setItem("speciality", speciality);

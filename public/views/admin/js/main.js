@@ -66,10 +66,8 @@ $(document).ready(function(){
    	 						}
 						});
 					});
-
-
-        			recordContainer.appendChild(template);
-
+					
+        		recordContainer.appendChild(template);
         	});
    		 }
 	});
