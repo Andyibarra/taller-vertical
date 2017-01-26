@@ -4,7 +4,6 @@
 
 .flex-container > *{
 	margin: .25rem !important;
-	;
 }
 
 .flex-container > *:first-child {
@@ -17,4 +16,8 @@
 
 .flex-1{
 	flex: 1;
+}
+
+.front{
+	background: url('../img/frontpage.jpg');
 }

@@ -28,9 +28,10 @@ exports.newEntry = function(req, res){
 };
 
 
+///gets only registers with status : 0
 exports.fetch = function(req, res){
 
-	Record.find(function(err, data){
+	Record.find({status : 0}, function(err, data){
 
 		if(err){
 			res.send(err);
@@ -44,6 +45,8 @@ exports.fetch = function(req, res){
 exports.delete = function(req, res){
 
 	Record.remove({'_id': req.params.rec_id}, function(err, rec){
+
+
 		if(err){
 			res.send(err);
 		}
@@ -66,10 +69,13 @@ exports.getOnProgress = function(req, res){
 };
 
 
+
+
 // Setters 
 exports.setStatus = function(req, res){
 
-	Record.findOneAndUpdate(req.body.id, {"status": req.body.status}, function(err, data){
+
+	Record.findOneAndUpdate({'_id' : req.body.id}, {"status": req.body.status}, function(err, data){
 		if(err){
 			res.send(err);
 		}
