@@ -11,7 +11,7 @@ exports.newEntry = function(req, res){
 	user.lname 			= req.body.lname;
 	user.nationality 	= req.body.nation;
 	user.email			= req.body.email;	
-	user.locale 		= req.body.locale;
+	user.locale 		= req.body.center;
 	user.comment		= req.body.comments;
 	user.speciality 	= req.body.speciality;
 
