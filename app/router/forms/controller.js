@@ -6,7 +6,7 @@ var Record			= require('./model/record');
 exports.newEntry = function(req, res){
 
 	console.log(req.body);
-
+	
 	var user = new Record(req.body);
 
 	user.save(function(err){

@@ -24,8 +24,8 @@ $(document).ready(function() {
 
 		$.ajax({
 
-			url: 'http://localhost/api/form',
-		    type: 'POST',
+			url			: 'http://138.197.219.168/api/form',
+		    type 		: 'POST',
 		    contentType : 'application/json',
 		    dataType	: "json",
 		    data		: record,
