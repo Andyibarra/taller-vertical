@@ -4,9 +4,9 @@
 	<!-- Esta parte direeciona las carpetas -->
 	<link rel="stylesheet" type="text/css" href="../../dist/bootstrap.min.css">
 	<script src="../../dist/jquery-3.1.1.min.js"></script>
-	
+
 	<script type="text/javascript">
-		
+
 		$(document).ready(function() {
 
 			document.getElementById("loc").innerHTML = localStorage.getItem("locale");
@@ -15,7 +15,7 @@
 
 	</script>
 
-	<title></title>
+	<title>Form</title>
 </head>
 
 <body >
@@ -29,12 +29,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Puerta de Hierro</a>
+      <a class="navbar-brand" href="../../index.html">Puerta de Hierro</a>
     </div>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About</a></li>
-      </ul>
     </div>
   </div>
 </nav>
@@ -42,7 +38,7 @@
 
 <!-- Empieza el cuadro de texto -->
 
-<!-- Termina cuadro de texto -->
+
 
 <div class="col-md-3" ></div>
 <div class="col-md-6" >
@@ -50,7 +46,7 @@
 
 	<h2 id="loc"></h2>
 	<h4 id="spec"></h4>
-	<p> Te pedimos por favor que ingreses tus datos </p>
+	<p> Please fill the following spaces with the data asked. </p>
 
 </div>
 
@@ -83,16 +79,17 @@
 	<div class="form-group"  style="margin: 2%">
 	      <label class="control-label" for="comments"  > Comments </label >
 	        <textarea class="form-control" rows="3" id="comment" style="width: 550px" ></textarea>
-	        <span class="help-block" style="text-align: center;">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+	        <span class="help-block" style="text-align: center;">Any additional comments will be useful for us.</span>
 	      </div>
-	  
+
 	 <div class="row">
 	 <div class="form-group" style="margin-left:  85%; margin-bottom: 2% ">
-	     	<button  class="btn btn-primary" type="button" onclick="getData()" id="sub">Zas</button>
+	     	<a class="btn btn-primary" type="button" onclick="getData()" id="sub" href="conf.html">Submit</a>
 	    </div>
 	 </div>
 
-	</div>          
+	</div>
+<!-- Termina cuadro de texto -->
 
 </body>
 <script type="text/javascript" src="send_form.js"></script>
