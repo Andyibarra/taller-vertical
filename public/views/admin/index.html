@@ -10,7 +10,6 @@
 	<script type="text/javascript" src="../../dist/jquery-3.1.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../dist/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/sidebar.css">
-	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="js/sidebar.js"></script> 
 	<script src="js/main.js"></script> 
 
@@ -19,6 +18,7 @@
 
 </head>
 <body>
+
 	<header class="navbar navbar-inverse navbar-fixed-top">
 	  <div class="navbar-header">
 	    
@@ -29,7 +29,7 @@
 	      <span class="icon-bar"></span>
 	    </button>
 	    
-	    <a href="#" class="navbar-brand">[ Mi empresa ]</a>      
+	    <a href="#" class="navbar-brand">Panel de Administración</a>      
 	    
 	  </div>
 	   
@@ -46,59 +46,55 @@
 
 	<!-- contenido -->
 	<div class="wrapper" >
-	  <div class="page-wrapper">
+	  <div class="page-wrapper" id="template-container">
 
 
-	     <div class="row" style="padding-top: 25px">
-
-
-	     <!--<div class="col-xs-12"><h1>Mi Dashboard</h1></div>-->
-	      
+	  	<!-- primer template de registro -->
+	  	<template id="record-template"> 	  
+	     <div class="row" style="padding: 25px">
 	      <a href="#" class="list-group-item">
 	      	<div class="row">
-	      		<div class="col-md-1 col-md-offset-11">
-
-	      			FECHA
+	      		<div class="col-md-2 col-md-offset-10">
+	      			Hace 2 días
 	      		</div>
 
 	      	</div>
 
 	      	 <div class="row">
 		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Nombre </h3>
-		      	<h5> Ana Gabriela</h5>
+		      	<h4 class="record-name"> Ana Gabriela</h4>
 		      	</div>
-		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Especialidad </h3>
-		      	<h5> Cardiologo</h5>
+		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Solicita </h3>
+		      	<h4 class="record-spec"> Cardiologo</h4>
 		      	</div>   
-		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Nacionalidad </h3>
-		      	<h5> Mexicana</h5>
+		      	<div class="col-md-2"><h3 class="list-group-item-heading" > Centro </h3>
+		      	<h4 class="record-loc"></h4>
 		      	</div>   
-		      	<div class="col-md-3"><h3 class="list-group-item-heading" > Contacto </h3>
-		      	<h5> email@email.com</h5>
+		      	<div class="col-md-2"><h3 class="list-group-item-heading" > Nacionalidad </h3>
+		      	<h4 class="record-nat"> Mexicana</h4>
+		      	</div>   
+		      	<div class="col-md-2"><h3 class="list-group-item-heading" > Contacto </h3>
+		      	<h4 class="record-email"> email@email.com</h4>
 		      	</div>   
 		   	</div>
 		   	<div class="row">
-				<div class="col-md-4"><h3 class="list-group-item-heading" >Comentarios </h3>
-					Coment		   	
-
+				<div class="col-md-12"><h4 class="list-group-item-heading" >Comentarios </h4>
+					<h6 class="record-comments"> email@email.com</h6>
 			   	</div>
 		   	</div>
 		   	<div class="row">
 		   		<div class="col-md-2 col-md-offset-10">
-			   		<span href="#" class="btn btn-success">Aceptar</span>
-			   		<span href="#" class="btn btn-danger">Rechazar<span>
-			   		
+			   		<span href="#" class="btn btn-success" >Aceptar</span>
+			   		<span href="#" class="btn btn-danger" id="del">Rechazar<span>
 		   	   </div>
 		   	</div>
-
  		  </a>
-
-	  </div>  
+	  	</div>  
+	  </template>
 
 
 	</div>
   </div>
-
 </body>
 
 </html>

@@ -49,8 +49,25 @@ exports.delete = function(req, res){
 		if(err){
 			res.send(err);
 		}
-
 		res.json({message: "Record Deleted !"});
 	});
 
 };
+
+
+
+exports.getOnProgress = function(req, res){
+
+	Record.find({status : 1, status : 2, status: 3	}, function(err, data){
+
+		if(err){
+			res.send(err);				
+		}
+
+		res.send(data);
+
+	});
+
+};
+
+

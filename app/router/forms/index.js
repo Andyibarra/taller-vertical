@@ -7,6 +7,6 @@ var router = express.Router();
 router.post('/', controller.newEntry);
 router.get('/', controller.fetch);
 router.delete('/:rec_id', controller.delete);
-
+router.get('/on-progress', controller.getOnProgress);
 
 module.exports = router;
