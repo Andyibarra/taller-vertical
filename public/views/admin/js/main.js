@@ -24,6 +24,10 @@ $(document).ready(function(){
 		var loc  = template.content.querySelector('.record-loc');
 		loc.textContent = obj.center;
 
+		//adding an id to the parent container --> row
+		var parent_container  = template.content.querySelector('.row-template');
+		parent_container.id   = obj._id;
+
 		return template;
 
 	};
@@ -38,35 +42,89 @@ $(document).ready(function(){
 		    type: 'GET',
 		 	
     		success: function (data) {
+
     			var recordContainer = document.querySelector('#template-container');
 
         		$.each(data, function (i, obj) {
 
         			console.log(obj);
         			var template = setup_template(i, obj);
-        			template = document.importNode(template.content, true);
+        			template = document.importNode(template.content, true);	
+        			$(template).attr('id', obj._id);
 
 
-        			//adding actionlistener
+        			//adding listener to the reject button
         			template.querySelector('#del').addEventListener( 'click', function() {
-						console.log("holi crayoli");
-						console.log(obj._id);
+
 						var id = obj._id;
 
+						//llamada async
 						$.ajax({
 
 
-							url: 'http://localhost/api/form?' +id,
+							url: 'http://138.197.219.168/api/form/' +id,
    	 						type: 'DELETE',
    	 						success:  function(data){
-   	 							alert(data);
+
+
+   	 							alert("Deleted on the database!");
+   	 							var elementid = "#" +id;
+
+   	 							$(elementid).fadeToggle( "slow", "linear" );
+
+   	 							$(elementid).remove();
+
+   	 
    	 						},
    	 						failure: function(err){
    	 							alert(err);
    	 						}
+
+
+
 						});
 					});
-					
+
+
+					//adding listener to the reject button
+        			template.querySelector('#accept').addEventListener( 'click', function() {
+
+						
+						//console.log(obj._id);
+						var id = obj._id;
+						var params = JSON.stringify({ 
+							"id"			: id,
+							"status"		: 1
+						});
+						console.log(params);
+
+						//llamada async
+						$.ajax({
+
+
+							url 		: 'http://138.197.219.168/api/form/set-status',
+   	 						type  		: 'POST',
+   	 						contentType : 'application/json',
+		    				dataType	: "json",
+   	 						data 		:  params,
+
+   	 						success:  function(data){
+
+   	 							alert("Element Changed status!");
+   	 							var elementid = "#" +id;
+   	 							$(elementid).remove();
+
+   	 
+   	 						},
+   	 						failure: function(err){
+   	 							alert(err);
+   	 						}
+
+
+
+						});
+					});
+
         		recordContainer.appendChild(template);
         	});
    		 }
