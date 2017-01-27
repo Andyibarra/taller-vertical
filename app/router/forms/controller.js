@@ -5,15 +5,9 @@ var Record			= require('./model/record');
 
 exports.newEntry = function(req, res){
 
-	var user = new Record();
-
-	user.name 			= req.body.name;
-	user.lname 			= req.body.lname;
-	user.nationality 	= req.body.nation;
-	user.email			= req.body.email;	
-	user.locale 		= req.body.center;
-	user.comment		= req.body.comments;
-	user.speciality 	= req.body.speciality;
+	console.log(req.body);
+	
+	var user = new Record(req.body);
 
 	user.save(function(err){
 
@@ -59,7 +53,7 @@ exports.delete = function(req, res){
 
 exports.getOnProgress = function(req, res){
 
-	Record.find({status : 1, status : 2, status: 3	}, function(err, data){
+	Record.find({$or:[{status : 1}, {status : 2}, {status: 3}]}, function(err, data){
 		if(err){
 			res.send(err);				
 		}
